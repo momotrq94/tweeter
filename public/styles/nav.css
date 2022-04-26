@@ -6,6 +6,8 @@ nav {
   display: flex;
   justify-content: space-between;
   z-index: 3;
+  align-items: end;
+  padding-bottom: 15px;
 }
 
 .nav-span-text {
@@ -14,6 +16,7 @@ nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  font-size: 36px;
 }
 
 .newTweet {
@@ -22,4 +25,8 @@ nav {
   justify-content: center;
   align-items: center;
   margin: 0 1.5em 0 1.5em;
+}
+
+.nav-para {
+  margin: 5px;
 }
