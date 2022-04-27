@@ -8,6 +8,8 @@ nav {
   z-index: 3;
   align-items: end;
   padding-bottom: 15px;
+  position: sticky;
+  top: 0;
 }
 
 .nav-span-text {
