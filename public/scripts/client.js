@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 const createTweetElement = function (obj) {
+  let time = timeago.format(obj.created_at, "pt_BR");
   const $output = $(`<article class="posted-tweets">
   <header class="tweet-header">
     <div class="avatar-container">
@@ -16,7 +17,7 @@ const createTweetElement = function (obj) {
     ${obj.content.text}
   </div>
   <footer class="tweet-footer">
-    <div class="tweet-time">${obj.created_at} ago</div>
+    <div class="tweet-time">${time}</div>
     <div class="icons">
       <i class="fa-solid fa-flag" id="blueicon"></i>
       <i class="fa-solid fa-retweet" id="blueicon"></i>
