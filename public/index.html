@@ -63,8 +63,8 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
-        <form method="POST" action="/tweets">
+      <section class="new-tweet" id="tweets-container">
+        <form id="post-tweet" method="POST" action="/tweets">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div class="form-lower">
@@ -72,26 +72,6 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
-        <section class="posted-tweets">
-          <header class="tweet-header">
-            <div class="avatar-container">
-              <img class="tweet-image" src="/images/batmanAvatar.png" />
-              <div class="avatar-text">Batman</div>
-            </div>
-            <div class="username">@DarkKnight</div>
-          </header>
-          <div class="tweet-div">
-            It's not who we are underneath, but what we do that defines us.
-          </div>
-          <footer class="tweet-footer">
-            <div class="tweet-time">10 days ago</div>
-            <div class="icons">
-              <i class="fa-solid fa-flag" id="blueicon"></i>
-              <i class="fa-solid fa-retweet" id="blueicon"></i>
-              <i class="fa-solid fa-heart" id="blueicon"></i>
-            </div>
-          </footer>
-        </section>
       </section>
     </main>
   </body>
