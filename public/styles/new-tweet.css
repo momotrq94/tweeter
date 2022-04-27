@@ -2,6 +2,7 @@
   background-color: #4056a1;
   font-family: "Bungee", sans-serif;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .counter {
@@ -23,7 +24,7 @@ form {
 }
 
 #tweet-text {
-  background-color: #f4f1ec;
+  background-color: antiquewhite;
   border: transparent;
   resize: none;
   outline: none;
@@ -33,5 +34,91 @@ form {
 }
 
 .new-tweet {
-  width: 50%;
+  width: 65%;
+  background-color: antiquewhite;
+}
+
+.posted-tweets {
+  border: black solid;
+  padding-top: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border-width: medium;
+}
+
+.tweet-footer {
+  border-top: black solid;
+  padding-top: 0.5rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  border-width: medium;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-image {
+  border-style: none;
+  width: 15%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.avatar-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.avatar-text {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 22px;
+}
+
+.username {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 24px;
+  color: gainsboro;
+  font-weight: bold;
+  padding-right: 1rem;
+}
+
+.tweet-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-div {
+  padding-left: 1.5rem;
+  padding-right: 3rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 24px;
+}
+
+.tweet-time {
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+}
+
+.icons {
+  transform: scale(0.55);
+  display: flex;
+  justify-content: space-between;
+  width: 125px;
+}
+
+#blueicon {
+  color: #4056a1;
+  cursor: pointer;
+}
+
+#blueicon:hover {
+  color: goldenrod;
+}
+
+.posted-tweets:hover {
+  box-shadow: 7px 5px pink;
 }
