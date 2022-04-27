@@ -34,32 +34,27 @@ const renderTweets = function (array) {
   }
 };
 
-const data = [
-  {
-    user: {
-      name: "Newton",
-      avatars: "https://i.imgur.com/73hZDYK.png",
-      handle: "@SirIsaac",
-    },
-    content: {
-      text: "If I have seen further it is by standing on the shoulders of giants",
-    },
-    created_at: 1461116232227,
-  },
-  {
-    user: {
-      name: "Descartes",
-      avatars: "https://i.imgur.com/nlhLi3I.png",
-      handle: "@rd",
-    },
-    content: {
-      text: "Je pense , donc je suis",
-    },
-    created_at: 1461113959088,
-  },
-];
-
 //shorthand of document.ready
 $(() => {
-  renderTweets(data);
+  $("#post-tweet").submit(function (event) {
+    event.preventDefault();
+    const formData = $(this).serialize();
+    console.log(this, formData);
+    $.ajax({
+      method: "POST",
+      data: formData,
+      url: "/tweets",
+    })
+      .then((res) => $("#post-tweet")[0].reset())
+      .catch((error) => console.log(error));
+  });
+  function loadTweets() {
+    $.ajax({ method: "GET", url: "/tweets", dataType: "json" })
+      .then((res) => {
+        renderTweets(res);
+      })
+      .catch((error) => console.log(error));
+  }
+
+  loadTweets();
 });
