@@ -69,7 +69,7 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet" id="tweets-container">
+      <section class="new-tweet">
         <form id="post-tweet" method="POST" action="/tweets">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
@@ -78,6 +78,7 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+        <div id="tweets-container"></div>
       </section>
     </main>
   </body>

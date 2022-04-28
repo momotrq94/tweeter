@@ -31,14 +31,30 @@ const createTweetElement = function (obj) {
 
 const renderTweets = function (array) {
   for (const tweet of array) {
-    $("#tweets-container").append(createTweetElement(tweet));
+    $("#tweets-container").prepend(createTweetElement(tweet));
   }
+};
+
+const renderLastTweet = function (tweet) {
+  $("#tweets-container").prepend(createTweetElement(tweet));
 };
 
 //shorthand of document.ready
 $(() => {
   $("#post-tweet").submit(function (event) {
     event.preventDefault();
+
+    let $tweetText = $(this).children("#tweet-text").val();
+    let $counter = $(this).find(".counter").val();
+
+    if ($tweetText === "") {
+      return alert("Cannot Post Empty Tweet!");
+    }
+
+    if ($counter < 0) {
+      return alert("Tweet cannot exceed 140 characters!");
+    }
+
     const formData = $(this).serialize();
     console.log(this, formData);
     $.ajax({
@@ -46,13 +62,24 @@ $(() => {
       data: formData,
       url: "/tweets",
     })
-      .then((res) => $("#post-tweet")[0].reset())
+      .then((res) => {
+        $("#post-tweet")[0].reset();
+        loadlastTweet();
+      })
       .catch((error) => console.log(error));
   });
   function loadTweets() {
     $.ajax({ method: "GET", url: "/tweets", dataType: "json" })
       .then((res) => {
         renderTweets(res);
+      })
+      .catch((error) => console.log(error));
+  }
+
+  function loadlastTweet() {
+    $.ajax({ method: "GET", url: "/tweets", dataType: "json" })
+      .then((res) => {
+        renderLastTweet(res[res.length - 1]);
       })
       .catch((error) => console.log(error));
   }
