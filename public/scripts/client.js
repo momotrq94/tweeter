@@ -3,6 +3,13 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
+const escapes = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement = function (obj) {
   let time = timeago.format(obj.created_at, "pt_BR");
   const $output = $(`<article class="posted-tweets">
@@ -14,7 +21,7 @@ const createTweetElement = function (obj) {
     <div class="username">${obj.user.handle}</div>
   </header>
   <div class="tweet-div">
-    ${obj.content.text}
+    ${escapes(obj.content.text)}
   </div>
   <footer class="tweet-footer">
     <div class="tweet-time">${time}</div>
