@@ -55,12 +55,20 @@ $(() => {
     let $counter = $(this).find(".counter").val();
 
     if ($tweetText === "") {
-      return alert("Cannot Post Empty Tweet!");
+      $("#error-box").slideDown("slow");
+      $("#error-box").css("display", "flex");
+      $("#error-message").text("Cannot post empty tweet");
+      return;
     }
 
     if ($counter < 0) {
-      return alert("Tweet cannot exceed 140 characters!");
+      $("#error-box").slideDown("slow");
+      $("#error-box").css("display", "flex");
+      $("#error-message").text("Cannot exceed 140 character limit");
+      return;
     }
+
+    $("#error-box").slideUp("fast");
 
     const formData = $(this).serialize();
     console.log(this, formData);

@@ -93,6 +93,7 @@ form {
   padding-top: 1.5rem;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 24px;
+  overflow: auto;
 }
 
 .tweet-time {
@@ -120,4 +121,20 @@ form {
 
 .posted-tweets:hover {
   box-shadow: 7px 5px pink;
+}
+
+#error-box {
+  border: solid red;
+  text-align: center;
+  color: red;
+  margin-top: 2rem;
+  border-width: medium;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#alert-icon {
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
 }
