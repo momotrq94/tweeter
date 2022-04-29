@@ -39,6 +39,10 @@ main {
   background-color: antiquewhite;
 }
 
+.header-main-container {
+  width: 100%;
+}
+
 /* Now for the desktop layout */
 
 @media only screen and (min-width: 1024px) {

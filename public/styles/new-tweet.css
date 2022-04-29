@@ -110,6 +110,10 @@ form {
   width: 125px;
 }
 
+.no-display {
+  display: none;
+}
+
 #blueicon {
   color: #4056a1;
   cursor: pointer;

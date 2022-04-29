@@ -57,7 +57,9 @@
       <span class="nav-span-text">tweeter</span>
       <div class="newTweet">
         <p class="nav-para"><strong>Write</strong> a new tweet</p>
-        <i class="fa-solid fa-angles-down"></i>
+        <button class="new-tweet-button">
+          <i class="fa-solid fa-angles-down"></i>
+        </button>
       </div>
     </nav>
     <div class="header-main-container">
@@ -74,7 +76,12 @@
       <!-- Page-specific (main) content here -->
       <main class="container">
         <section class="new-tweet">
-          <form id="post-tweet" method="POST" action="/tweets">
+          <form
+            id="post-tweet"
+            class="no-display"
+            method="POST"
+            action="/tweets"
+          >
             <label for="tweet-text">What are you humming about?</label>
             <textarea name="text" id="tweet-text"></textarea>
             <div class="form-lower">

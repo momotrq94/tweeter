@@ -48,6 +48,10 @@ const renderLastTweet = function (tweet) {
 
 //shorthand of document.ready
 $(() => {
+  $(".new-tweet-button").on("click", function () {
+    $("#post-tweet").slideToggle();
+  });
+
   $("#post-tweet").submit(function (event) {
     event.preventDefault();
 

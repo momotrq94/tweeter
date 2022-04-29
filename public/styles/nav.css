@@ -34,8 +34,20 @@ nav {
   margin: 5px;
 }
 
+.new-tweet-button {
+  background-color: #f07c00;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  border: none;
+  cursor: pointer;
+  color: red;
+}
+
 @media only screen and (min-width: 1024px) {
   nav {
+    background-color: #4056a1;
+    background-image: none;
+  }
+  .new-tweet-button {
     background-color: #4056a1;
     background-image: none;
   }
