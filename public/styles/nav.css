@@ -9,13 +9,14 @@ nav {
   z-index: 3;
   align-items: end;
   padding-bottom: 15px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   position: sticky;
   top: 0;
 }
 
 .nav-span-text {
   font-family: "Bungee", sans-serif;
-  margin: 0 1.5em 0 1.5em;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -27,7 +28,6 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 1.5em 0 1.5em;
 }
 
 .nav-para {
