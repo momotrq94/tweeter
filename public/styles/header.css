@@ -9,3 +9,13 @@
   align-items: center;
   color: #ffffff;
 }
+
+@media only screen and (min-width: 1024px) {
+  .top-header {
+    width: 60%;
+    margin-top: 4rem;
+    margin-left: 4rem;
+    position: sticky;
+    top: 10rem;
+  }
+}

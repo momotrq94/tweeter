@@ -3,6 +3,10 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
 
     <!-- External CSS -->
     <link
@@ -56,35 +60,38 @@
         <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
-
-    <header class="top-header">
-      <div>
-        <img src="/images/profile-hex.png" />
-      </div>
-      <br />
-      <div>
-        <h2>Mo <span style="font-weight: normal">Tariq</span></h2>
-      </div>
-    </header>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <form id="post-tweet" method="POST" action="/tweets">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div class="form-lower">
-            <button class="tweet-button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-        <div id="error-box">
-          <i id="alert-icon" class="fa-solid fa-triangle-exclamation"></i>
-          <p id="error-message"></p>
-          <i id="alert-icon" class="fa-solid fa-triangle-exclamation"></i>
+    <div class="header-main-container">
+      <header class="top-header">
+        <div>
+          <img src="/images/profile-hex.png" />
         </div>
-        <div id="tweets-container"></div>
-      </section>
-    </main>
+        <br />
+        <div>
+          <h2>Mo <span style="font-weight: normal">Tariq</span></h2>
+        </div>
+      </header>
+
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <form id="post-tweet" method="POST" action="/tweets">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div class="form-lower">
+              <button class="tweet-button" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text"
+                >140</output
+              >
+            </div>
+          </form>
+          <div id="error-box">
+            <i id="alert-icon" class="fa-solid fa-triangle-exclamation"></i>
+            <p id="error-message"></p>
+            <i id="alert-icon" class="fa-solid fa-triangle-exclamation"></i>
+          </div>
+          <div id="tweets-container"></div>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
