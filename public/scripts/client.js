@@ -4,12 +4,14 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+//Safeguard function for Cross Site Scripting
 const escapes = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
+//Create Tweet function
 const createTweetElement = function (obj) {
   let time = timeago.format(obj.created_at, "pt_BR");
   const $output = $(`<article class="posted-tweets">
@@ -36,17 +38,18 @@ const createTweetElement = function (obj) {
   return $output;
 };
 
+//Function to render all tweets in database
 const renderTweets = function (array) {
   for (const tweet of array) {
     $("#tweets-container").prepend(createTweetElement(tweet));
   }
 };
-
+//Function to render just last tweet
 const renderLastTweet = function (tweet) {
   $("#tweets-container").prepend(createTweetElement(tweet));
 };
 
-//shorthand of document.ready
+//Document Ready
 $(() => {
   $(".new-tweet-button").on("click", function () {
     $("#post-tweet").slideToggle();
