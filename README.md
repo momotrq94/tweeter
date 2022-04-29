@@ -22,5 +22,5 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-!["Screenshot of homepage on desktop"]()
-!["Screenshot of homepage on smaller devices (mobiles, tablets etc)]()
+!["Screenshot of homepage on desktop"](https://github.com/momotrq94/tweeter/blob/master/docs/tweeter-homepage-desktop.png)
+!["Screenshot of homepage on smaller devices (mobiles, tablets etc)](https://github.com/momotrq94/tweeter/blob/master/docs/tweeter-homepage-mobile.png)
